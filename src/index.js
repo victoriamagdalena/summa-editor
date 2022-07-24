@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import { toast } from "react-toastify";
+
 import "react-toastify/dist/ReactToastify.css";
 import "./assets/tailwind/tailwind.css";
-import App from "./components/App/App";
-import { AppProvider } from "./context/AppContext";
-import { PageProvider } from "./context/PageContext";
+import App from "./App";
 import "./index.css";
 
 toast.configure({
@@ -17,11 +17,9 @@ toast.configure({
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppProvider>
-      <PageProvider>
-        <App />
-      </PageProvider>
-    </AppProvider>
+    <Router>
+      <App />
+    </Router>
   </React.StrictMode>,
   document.getElementById("root")
 );

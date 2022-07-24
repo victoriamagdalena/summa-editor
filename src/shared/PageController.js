@@ -1,5 +1,7 @@
 import React, { useContext } from "react";
-
+import { Button } from "react-bootstrap";
+import { useNavigate } from "react-router";
+import { useUserAuth } from "../context/UserAuthContext";
 import PageContext from "../context/PageContext";
 
 const PageController = () => {
@@ -11,6 +13,17 @@ const PageController = () => {
   const centerReset = () => {
     panZoomRef.current.autoCenter(1);
     panZoomRef.current.reset(1);
+  };
+
+  const { logOut } = useUserAuth();
+  const navigate = useNavigate();
+  const handleLogout = async () => {
+    try {
+      await logOut();
+      navigate("/");
+    } catch (error) {
+      console.log(error.message);
+    }
   };
 
   return (
@@ -56,6 +69,8 @@ const PageController = () => {
           <i className="material-icons">save</i>
         </div>
 
+
+
         <div className="text-gray-400 p-3">|</div>
 
         <a
@@ -65,7 +80,14 @@ const PageController = () => {
           rel="noopener noreferrer"
         >
           <i className="material-icons">help_outline</i>
+
         </a>
+
+        <div className="d-grid gap-2">
+            <Button variant="primary" onClick={handleLogout}>
+              Log out
+            </Button>
+        </div>
       </div>
     </div>
   );
