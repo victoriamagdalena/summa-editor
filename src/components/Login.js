@@ -57,16 +57,18 @@ const Login = () => {
             />
           </Form.Group>
 
-          <div className="d-grid gap-2">
+          <div className="d-grid gap-2 mb-3">
             <Button variant="primary" className = "btn" type="Submit">
               Log In
             </Button>
           </div>
         </Form>
+
         <hr />
+        
         <div>
           <GoogleButton
-            className="g-btn"
+            className="g-btn mt-3"
             type="dark"
             onClick={handleGoogleSignIn}
           />
@@ -75,6 +77,7 @@ const Login = () => {
       <div className="p-4 box mt-3 text-center">
         Don't have an account? <Link to="/signup" className = "link">Sign up</Link>
       </div>
+      
     </>
   );
 };

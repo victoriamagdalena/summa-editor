@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "summa-signup"
-  }
+    "default": "summa-cd655",
+    "deploy": "summa-cd655"
+  },
+  "targets": {},
+  "etags": {}
 }

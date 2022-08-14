@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 import { toast } from "react-toastify";
-
 import "react-toastify/dist/ReactToastify.css";
 import "./assets/tailwind/tailwind.css";
 import App from "./App";

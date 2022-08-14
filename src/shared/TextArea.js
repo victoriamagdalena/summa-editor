@@ -1,5 +1,5 @@
 import React from 'react';
-import MarkdownHelpText from './MarkdownHelpText';
+// import MarkdownHelpText from './MarkdownHelpText';
 
 const TextArea = ({ label, placeholder, value, onChange, className, rows = 5 }) => (
   <div className={`w-full flex flex-col ${className}`}>
@@ -14,7 +14,7 @@ const TextArea = ({ label, placeholder, value, onChange, className, rows = 5 }) 
       placeholder={placeholder}
     />
 
-    <MarkdownHelpText className="mt-2" />
+    {/* <MarkdownHelpText className="mt-2" /> */}
   </div>
 );
 

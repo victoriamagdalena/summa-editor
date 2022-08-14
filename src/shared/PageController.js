@@ -75,7 +75,7 @@ const PageController = () => {
 
         <a
           className="p-3 hover:bg-gray-200 cursor-pointer flex"
-          href="https://doc.summaresume.org/"
+          href="https://docs.google.com/document/d/1wMXy6woJc85zyEUsexLUyYkWUgwSxumDfYP6dawyfjs/edit?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
         >
